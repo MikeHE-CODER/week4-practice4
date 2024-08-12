@@ -2,9 +2,12 @@
 #include <iostream>
 #include <string>
 PersonList createPersonList(int n) {
-  PersonList *array = new PersonList[n];
+  PersonList array;
+  array.numPeople = n;
+  array.people = new Person[n];
   for (int i = 0; i < n; i++) {
-    array[i].numPeople = 1;
-    array[i].people->name = "Jane Doe";
+    array.people[i].name = "Jane";
+    array.people[i].age = 1;
   }
+  return array;
 }
